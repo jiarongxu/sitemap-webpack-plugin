@@ -15,11 +15,11 @@ SitemapWebpackPlugin.prototype.apply = function(compiler) {
     var priority = self.options[i].priority ? self.options[i].priority: 0.6;
     var changefreq = self.options[i].changefreq ? self.options[i].changefreq: 'weekly';
 
-    out += '<url>\n';
-    out += '<loc>' + self.base + path + '</loc>\n';
-    out += '<changefreq>' + changefreq + '</changefreq>\n';
-    out += '<priority>' + priority + '</priority>\n';
-    out += '</url>\n';
+    out += '\t<url>\n';
+    out += '\t\t<loc>' + self.base + path + '</loc>\n';
+    out += '\t\t<changefreq>' + changefreq + '</changefreq>\n';
+    out += '\t\t<priority>' + priority + '</priority>\n';
+    out += '\t</url>\n';
   }
   out += '</urlset>';
 
