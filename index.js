@@ -8,7 +8,7 @@ SitemapWebpackPlugin.prototype.apply = function(compiler) {
   var self = this;
 
   // Create sitemap from paths
-  var out = '<?xml version="1.0" encoding="UTF-8"?>';
+  var out = '<?xml version="1.0" encoding="UTF-8"?>\n';
   out += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   for(var i = 0; i < self.options.length; i++) {
     var path = self.options[i].path;
